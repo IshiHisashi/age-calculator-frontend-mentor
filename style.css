@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+/* var */
+:root {
+  --color-p: hsl(259, 100%, 65%);
+  --color-lr: hsl(0, 100%, 67%);
+  --color-w: hsl(0, 0%, 100%);
+  --color-ow: hsl(0, 0%, 94%);
+  --color-lg: hsl(0, 0%, 86%);
+  --color-sg: hsl(0, 1%, 44%);
+  --color-ob: hsl(0, 0%, 8%);
+  --font-xs: 8px;
+  --font-s: 12px;
+  --font-ms: 20px;
+  --font-m: 32px;
+  --font-l: 48px;
+  --font-xl: 64px;
+  --space-s: 12px;
+  --space-m: 32px;
+  --space-l: 56px;
+}
+
+/* Global setting */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: var(--font-m);
+  background-color: var(--color-ow);
+}
+
+.container {
+  margin: 50px 50px;
+  /* width: 80%; */
+  max-width: 1000px;
+  padding: var(--space-l) var(--space-m);
+  background-color: var(--color-w);
+  /* border: 1px solid black; */
+  border-radius: 25px 25px 100px 25px;
+}
+
+/* input */
+.give-num {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: var(--space-l); */
+  padding-bottom: var(--space-l);
+  border-bottom: 1px solid var(--color-lg);
+  position: relative;
+}
+
+/* form */
+
+form {
+  /* display: inline-block; */
+  width: 50%;
+}
+label {
+  display: block;
+  font-size: var(--font-s);
+  color: var(--color-sg);
+  letter-spacing: 1px;
+}
+input {
+  font-size: var(--font-ms);
+  /* margin-left: var(--space-s); */
+  width: 100%;
+  padding: 5px var(--space-s);
+  border-radius: 5px;
+  border: 1px solid var(--color-sg);
+}
+
+form p {
+  color: red;
+  font-size: var(--font-xs);
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  border: none;
+  border-radius: 100px;
+  background-color: var(--color-p);
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* output */
+.output {
+  margin-top: var(--space-l);
+  font-size: var(--font-l);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.output-num {
+  color: var(--color-p);
+}
+
+/* Desktop size */
+@media screen and (min-width: 600px) {
+  button {
+    right: var(--space-s);
+  }
+
+  input {
+    font-size: var(--font-m);
+    padding: 5px var(--space-s);
+  }
+
+  .output {
+    font-size: var(--font-xl);
+  }
+}
